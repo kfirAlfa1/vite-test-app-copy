@@ -7,6 +7,10 @@ export default defineConfig({
   server: {
     host: "::",
     port: 8080,
+    // Base44 sandbox preview only: allow the proxied preview host.
+    ...(process.env.BASE44_PREVIEW_MODE === "1" && process.env.BASE44_SANDBOX_HOST_DOMAIN
+      ? { allowedHosts: [`.${process.env.BASE44_SANDBOX_HOST_DOMAIN}`] }
+      : {}),
   },
   plugins: [react()],
   resolve: {
