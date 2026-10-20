@@ -14,7 +14,7 @@ const Counter = () => {
       <span className="min-w-12 text-center text-3xl font-bold tabular-nums">{count}</span>
       <button
         onClick={() => setCount((c) => c + 1)}
-        className="h-10 w-10 rounded-lg bg-indigo-500 text-lg font-semibold text-white hover:bg-indigo-600"
+        className="h-10 w-10 rounded-lg bg-green-500 text-lg font-semibold text-white hover:bg-green-600"
       >
         +
       </button>
