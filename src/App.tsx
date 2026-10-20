@@ -9,6 +9,17 @@ const App = () => {
         <div className="flex justify-center">
           <Counter />
         </div>
+        <div className="mt-6 flex justify-center gap-3">
+          {["Button 1", "Button 2", "Button 3"].map((label) => (
+            <button
+              key={label}
+              type="button"
+              className="rounded-lg bg-slate-900 px-4 py-2 text-white hover:bg-slate-700"
+            >
+              {label}
+            </button>
+          ))}
+        </div>
       </div>
     </main>
   );
